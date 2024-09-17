@@ -42,6 +42,9 @@ header nav ul li{
 .playing ul li{
     animation: colorChange 2s infinite;
 }
+.active{
+    border-bottom: 2px solid #bdae82;
+}
 header nav ul li:hover, footer p a:hover{
     cursor: pointer;
     color: #bdae82;

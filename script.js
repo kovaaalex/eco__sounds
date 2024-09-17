@@ -13,7 +13,7 @@ function pauseAudio(){
     audio.pause()
 }
 function toggleBtn() {
-  
+  musicList.forEach(song1 => song1.classList.remove('active'))
   if (pauseButton.classList.contains('pause')) {
     pauseAudio();
     isPlay = false;
@@ -26,8 +26,10 @@ function toggleBtn() {
   pauseButton.classList.toggle('pause')
 }
 musicList.forEach(song => song.addEventListener('click', () => {
-  let classOfMusic = song.className
-  isPlay = true
+  musicList.forEach(song1 => song1.classList.remove('active'))
+  song.classList.add('active')
+  let classOfMusic = song.classList[0]
+  isPlay = true;
   nav.classList.add('playing')
   playAudio(`assets/audio/${classOfMusic}.mp3`)
   document.body.style.background = `url(assets/img/${classOfMusic}.jpg)`
