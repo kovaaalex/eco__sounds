@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background: url(assets/img/forest.jpg);
+} 
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    align-items: center;
+    background-color: #000;
+    height: 60px;
+}
+header svg{
+    height: 50px;
+    width: 50px;
+    transition: 0.5s ease;
+}
+header svg path{
+    transition: 0.5s ease;
+}
+header svg path:hover{
+    color: #FFF;
+    cursor: pointer;
+    fill: #fff;
+    transition: 0.5s ease;
+}
+header nav ul{
+    display: flex;
+    gap: 40px;
+} 
+header nav ul li{
+    list-style-type: none;
+    color: #FFF;
+    font-size: 20px;
+    transition: color 0.5s ease;
+}
+.playing ul li{
+    animation: colorChange 2s infinite;
+}
+header nav ul li:hover, footer p a:hover{
+    cursor: pointer;
+    color: #bdae82;
+    transition: color 0.5s ease;
+}
+#pause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(assets/svg/play.svg);
+    background-size: contain;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+#pause.pause {  
+    background-image: url(assets/svg/pause.svg);
+}
+#pause:hover{
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+footer{
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    height: 60px;
+    font-size: 20px;
+}
+.footer__data{
+    display: flex;
+    gap: 30px;
+    margin-left: 40px;
+}
+footer a{
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+.rs__school {
+    display: flex;
+    width: 135px;
+    height: 50px;
+    margin-right: 40px;
+}
+
+.rs__school svg {
+    width: 135px;
+    height: 50px;
+}
+
+.rs__school svg path {
+    transition: 0.5s ease;
+}
+
+.rs__school:hover svg path {
+    fill: #bdae82;
+    transition: 0.5s ease;
+}
+
+@keyframes colorChange {
+    0% {
+        color: white;
+    }
+    50% {
+        color: #bdae82;
+    }
+    100% {
+        color: white;
+    }
+}
